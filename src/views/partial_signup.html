@@ -1,0 +1,42 @@
+<div class="container-fluid background_img p-3">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card lg-card my-auto" ">
+			<div class="card-body ">
+				<div class="d-flex justify-content-center p-3 ">
+					<img src="../../src/img/mm.png " class="mm-logo ">
+				</div>
+				<div class="row m-0 p-3 ">
+					<form class="col-12" name="signupform" ng-submit="signupFn()">
+						<div class="d-flex justify-content-center w-100 my-2">
+							<h5>Please sign in to start build Website.</h5>
+						</div>
+						<div class="d-flex justify-content-center w-100 my-2" ng-show="errorMsg">
+							<span class="error-msg">{{errorMsg}}</span>
+						</div>
+						<div class="form-group">
+							<label for="nameId ">Username</label>
+							<input type="text" class="form-control " id="nameId" name="name" ng-model="user.name"  placeholder="Enter name" required>
+							<small class="error-msg" ng-show="signupform.name.$touched && signupform.name.$invalid">Username is required.</small>
+						</div>
+						<div class="form-group">
+							<label for="emailId ">Email address</label>
+							<input type="email" class="form-control " id="emailId" name="email" ng-model="user.email"  placeholder="Enter email" required>
+							<small class="error-msg" ng-show="signupform.email.$touched && signupform.email.$error.email">Please enter valid email.</small>
+						</div>
+						<div class="form-group ">
+							<label for="passwordId">Password</label>
+							<input type="password" class="form-control" id="passwordId" name="password" ng-model="user.password" placeholder="Password " required>
+							 <small class="error-msg" ng-show="signupform.password.$touched && signupform.password.$invalid">Password is required.</small>
+						</div>
+
+						<button type="submit" class="btn btn-primary float-right w-100" ng-disabled="signupform.password.$invalid ||signupform.email.$invalid || signupform.name.$invalid || signupform.email.$error.email">SIGN UP</button>
+						<div class="d-flex w-100 text-center">
+							<a ui-sref="signup" class="w-100"><small> Already registered - SignIN</small></a>
+
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,32 @@
+
+
+<div class="disableInCodePrint" style="display:none;">
+    <button type="button" class="btn btn-primary contentEditButton" ng-if="!isEditable" ng-click="changeEditMode()">
+    <i class="fa fa-pencil"></i></button>
+    <button type="button" class="btn btn-success contentEditButton" ng-if="isEditable" ng-click="updateContent()">
+        <i class="fa fa-check"></i></button>
+    <button type="button" class="btn btn-danger contentEditButton" ng-if="isEditable" ng-click="changeEditMode()">
+        <i class="fa fa-times"></i></button>    
+</div>
+<div ng-if="type == 'header'">
+    <h1 ng-if="!isEditable">{{shownData.headerMsg}}</h1>
+    <input ng-if="isEditable" type="text" class="form-control" placeholder="Header message" id="header-message" ng-model="data.headerMsg" />
+</div>
+<div ng-if="type == 'paragraph'">
+    <p ng-if="!isEditable">{{shownData.paragraphMsg}}</p>
+    <textarea ng-if="isEditable" class="form-control" id="message-text" placeholder="Paragraph Content" ng-model="data.paragraphMsg"></textarea>
+</div>
+<div ng-if="type == 'image'" style="width: 100%;height:100%;max-height:400px;">
+    <input ng-if="isEditable" type="text" class="form-control" placeholder="Image Url like ,imgure" id="image-url" ng-model="data.imageUrl" />
+    <img ng-if="!isEditable" src="{{shownData.imageUrl}}" width="100%" style="height:inherit;max-height: 400px;">
+</div>
+
+<div ng-if="type == 'anchor'">
+    <input ng-if="isEditable" type="text" class="form-control" placeholder="Anchor Url" id="anchor-url" ng-model="data.anchorUrl" />
+    <textarea ng-if="isEditable" class="form-control" id="message-text" placeholder="Anchor description" ng-model="data.anchorDescription"></textarea>
+    <div class="anchor-content" ng-if=" !isEditable">
+        <a href="{{shownData.anchorUrl}}" target="blank">{{shownData.anchorUrl}}</a>
+        <br/>
+        <p>{{shownData.anchorDescription}}</p>
+    </div>
+</div>

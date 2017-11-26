@@ -1,0 +1,24 @@
+{
+  "name": "website_maker",
+  "description": "make website from drag and drop",
+  "main": "index.js",
+  "authors": [
+    "Tarun Kumar"
+  ],
+  "license": "ISC",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.6.6",
+    "bootstrap": "v4.0.0-beta",
+    "angular-ui-router": "^1.0.11",
+    "components-font-awesome": "^4.7.0",
+    "jquery-ui": "^1.12.1"
+  }
+}

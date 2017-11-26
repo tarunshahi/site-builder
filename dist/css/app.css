@@ -1,0 +1,84 @@
+.lg-card {
+  width: 30%;
+  min-height: 500px; }
+  .lg-card .mm-logo {
+    border-radius: 50%;
+    border: 4px solid #dcdcdc;
+    height: 100px;
+    width: 100px; }
+  .lg-card .error-msg {
+    color: red;
+    font-weight: 500; }
+
+.bd-navbar {
+  min-height: 4rem;
+  background-color: #563d7c;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05), inset 0 -1px 0 rgba(0, 0, 0, 0.1); }
+  .bd-navbar .nav-item {
+    color: #fff;
+    margin: 0px 10px;
+    font-size: 18px; }
+    .bd-navbar .nav-item .login-image {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%; }
+
+.home-container {
+  height: calc(100vh - 70px);
+  overflow: hidden; }
+  .home-container .side-nav {
+    border-right: 1px solid #dcdcdc; }
+    .home-container .side-nav .header {
+      border-bottom: 1px solid #dcdcdc; }
+    .home-container .side-nav .draggable-header {
+      border: 1px solid #dcdcdc;
+      text-align: center;
+      padding: 10px;
+      display: inline-block;
+      width: 100%;
+      margin: 10px 0px; }
+      .home-container .side-nav .draggable-header .contentEditButton {
+        visibility: hidden; }
+  .home-container .action-container .header {
+    border-bottom: 1px solid #dcdcdc; }
+  .home-container .action-container #action {
+    position: relative;
+    padding: 20px;
+    height: calc(100vh - 230px);
+    overflow-y: auto;
+    border-bottom: 1px solid #dcdcdc;
+    display: block; }
+    .home-container .action-container #action .droped-item:hover {
+      border: 2px dotted #ccc; }
+      .home-container .action-container #action .droped-item:hover .disableInCodePrint {
+        display: block !important; }
+      .home-container .action-container #action .droped-item:hover .contentEditButton {
+        line-height: 12px;
+        cursor: pointer; }
+    .home-container .action-container #action .disableInCodePrint {
+      display: none;
+      position: absolute;
+      right: 0px;
+      top: -30px; }
+
+html, body {
+  margin: 0px;
+  padding: 0px; }
+
+.main_container {
+  height: 100%;
+  width: 100%; }
+
+.background_img {
+  background: url(../../src/img/login_back.jpg) no-repeat center center fixed transparent;
+  min-height: 100%;
+  height: 100vh;
+  min-width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 1s ease;
+  animation-direction: normal;
+  background-size: cover;
+  opacity: 0.8;
+  z-index: -2; }

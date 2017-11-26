@@ -1,0 +1,26 @@
+@import "login.scss";
+@import "signup.scss";
+@import "home.scss";
+
+html,body{
+	margin:0px;
+	padding:0px;
+}
+.main_container{
+	height:100%;
+	width:100%;
+}
+.background_img{
+	background: url(../../src/img/login_back.jpg) no-repeat center center fixed transparent;
+    min-height: 100%;
+    height:100vh;
+    min-width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 1s ease;
+    animation-direction: normal;
+    background-size: cover;
+    opacity: 0.8;
+    z-index: -2;
+}
