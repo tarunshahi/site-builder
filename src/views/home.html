@@ -58,12 +58,13 @@
       </div>
       <div class="modal-body">
       	<p>You should write this code inside body tag and run.</p>
-        <form>
+        
           <div class="form-group">
-            <label for="message-text" class="col-form-label">Html Code:</label>
-            <textarea class="form-control" id="message-text" ng-model="designCode" rows="10"></textarea>
+            <label for="code">
+              <button class="btn btn-sm copy-btn" data-clipboard-target="#code" title="Copy code"><i class="fa fa-clipboard"></i></button>
+            </label>
+            <textarea id="code" class="form-control" rows="10">{{designCode}} </textarea>
           </div>
-        </form>
       </div>
     </div>
   </div>

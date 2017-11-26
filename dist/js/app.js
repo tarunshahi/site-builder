@@ -167,6 +167,8 @@
 			}
 	    })
 
+	     new Clipboard('.copy-btn');
+
 	}])
 
 
@@ -253,6 +255,8 @@
 
 					$scope.data ={};
 					$scope.isEditable =false;
+					var count = parseInt($window.localStorage.getItem('isPrint'));
+					$window.localStorage.setItem('isPrint',count - 1);
 				}
 			}]
 		}
