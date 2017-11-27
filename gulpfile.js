@@ -80,7 +80,7 @@ gulp.task('style', style);
 gulp.task('views', views);
 gulp.task('images', img);
 
-gulp.task('default', [ 'style', 'sass', 'views', 'vendor', 'app', 'images','watch']);
+gulp.task('default', [ 'style', 'sass', 'views', 'vendor', 'app', 'images','watch', 'serve']);
 
 gulp.task('watch', function () {
     gulp.watch(gulpPaths.sass + '*.scss', ['sass']);
@@ -88,3 +88,17 @@ gulp.task('watch', function () {
     gulp.watch(gulpPaths.views + '*.html', ['views']);
     gulp.watch(gulpPaths.img + '*', ['images']);
 })
+
+gulp.task('serve', function () {
+    var http = require('http');
+    var statics = require('node-static');
+    var fs = require('fs');
+
+    var st = new statics.Server('./', {cache: -1});
+
+    console.log('Development server started a http://localhost:3333');
+
+    http.createServer(function (req, res) {
+        st.serve(req, res);
+    }).listen(3333);
+});
